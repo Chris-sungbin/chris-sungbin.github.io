@@ -3,21 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>태조관세사무소 | 통관부터 환급까지 신뢰의 파트너</title>
+<meta name="description" content="충남 천안 태조관세사무소 — 수출입 통관, 관세 환급, FTA 원산지 판정, 품목분류 사전심사까지. 대표 관세사 조성빈이 직접 상담합니다.">
+<link rel="canonical" href="https://tjcustoms.co.kr/">
+
+<!-- Open Graph: 카카오톡/블로그 등에 링크 공유 시 노출되는 정보 -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="태조관세사무소">
+<meta property="og:title" content="태조관세사무소 | 통관부터 환급까지 신뢰의 파트너">
+<meta property="og:description" content="수출입 통관, 관세 환급, FTA 원산지 판정, 품목분류 사전심사 — 대표 관세사가 직접 상담합니다.">
+<meta property="og:image" content="https://tjcustoms.co.kr/assets/logo-full.png">
+<meta property="og:url" content="https://tjcustoms.co.kr/">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" type="image/png" href="assets/logo-mark.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@500;700;900&family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- 지역 사업자 구조화 데이터: 네이버/구글 지도·검색 노출에 도움 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "태조관세사무소",
+  "alternateName": "Taejo Customs & Trade Service",
+  "image": "https://tjcustoms.co.kr/assets/logo-full.png",
+  "url": "https://tjcustoms.co.kr/",
+  "telephone": "+82-10-5930-7823",
+  "email": "sungbin@tjcustoms.co.kr",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "불당25로 244 15층 1514호",
+    "addressLocality": "천안시 서북구",
+    "addressRegion": "충남",
+    "addressCountry": "KR"
+  },
+  "founder": { "@type": "Person", "name": "조성빈" }
+}
+</script>
+
 <style>
   :root{
-    /* 로고 색상에 맞춘 컬러 팔레트 */
-    --ink:#171f2e;
-    --navy:#14284b; /* 로고의 메인 네이비 */
-    --navy-deep:#0b1930;
-    --paper:#ffffff; /* 로고 배경(흰색)과 자연스럽게 어울리도록 퓨어 화이트로 변경 */
-    --paper-line:#e2e8f0;
-    --accent-blue:#0071ad; /* 로고 좌측 상단의 라이트 블루 */
-    --accent-hover:#005b8e;
-    --muted:#64748b;
+    --ink:#141d2b;
+    --navy:#133052;
+    --navy-deep:#0a1d33;
+    --paper:#f4f6f8;
+    --paper-line:#dde3ea;
+    --brass:#3d6f96;
+    --brass-light:#4fa3dd;
+    --seal:#0476bf;
+    --muted:#5c6a7a;
     --white:#ffffff;
     --serif:'Noto Serif KR', serif;
     --sans:'Pretendard', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -34,18 +71,16 @@
   a{color:inherit;text-decoration:none;}
   .wrap{max-width:1120px;margin:0 auto;padding:0 28px;}
 
-  /* subtle background texture */
   .texture{
-    background-color: #f8fafc;
     background-image:
-      radial-gradient(circle at 1px 1px, rgba(20,40,75,0.05) 1px, transparent 0);
+      radial-gradient(circle at 1px 1px, rgba(19,48,82,0.06) 1px, transparent 0);
     background-size:22px 22px;
   }
 
   /* ===== HEADER ===== */
   header{
     position:sticky;top:0;z-index:50;
-    background:rgba(255,255,255,0.95);
+    background:rgba(244,246,248,0.92);
     backdrop-filter:blur(8px);
     border-bottom:1px solid var(--paper-line);
   }
@@ -53,210 +88,172 @@
     display:flex;align-items:center;justify-content:space-between;
     padding:14px 0;
   }
-  .brand{
-    display:flex;align-items:center;
-  }
-  .brand img {
-    height: 48px; /* 로고 이미지 높이 지정 */
-    width: auto;
-    object-fit: contain;
-  }
-  .nav-links{display:flex;gap:32px;font-size:15px;font-weight:600;color:var(--navy);}
+  .brand{display:flex;align-items:center;}
+  .brand img{height:38px;width:auto;display:block;}
+  .nav-links{display:flex;gap:32px;font-size:14.5px;font-weight:500;color:var(--navy);}
   .nav-links a{opacity:0.85;transition:opacity .2s;}
-  .nav-links a:hover{opacity:1;color:var(--accent-blue);}
+  .nav-links a:hover{opacity:1;color:var(--seal);}
   .nav-cta{
-    background:var(--navy);color:var(--white);
-    padding:10px 20px;border-radius:4px;font-size:14px;font-weight:600;
-    border:1px solid var(--navy);transition:all .2s;
+    background:var(--navy);color:var(--paper);
+    padding:10px 20px;border-radius:2px;font-size:14px;font-weight:600;
+    border:1px solid var(--navy);transition:background .2s;
   }
-  .nav-cta:hover{background:var(--accent-blue); border-color:var(--accent-blue);}
-  .nav-toggle{display:none;}
+  .nav-cta:hover{background:var(--navy-deep);}
 
   /* ===== HERO ===== */
-  .hero{
-    padding:90px 0 100px;position:relative;overflow:hidden;
-  }
-  .hero-grid{
-    display:grid;grid-template-columns:1.15fr 0.85fr;gap:60px;align-items:center;
-  }
+  .hero{padding:80px 0 90px;position:relative;overflow:hidden;}
+  .hero-grid{display:grid;grid-template-columns:1.15fr 0.85fr;gap:60px;align-items:center;}
   .eyebrow{
     display:inline-flex;align-items:center;gap:8px;
-    font-size:13px;font-weight:700;letter-spacing:2px;color:var(--accent-blue);
+    font-size:13px;font-weight:700;letter-spacing:2px;color:var(--seal);
     text-transform:uppercase;margin-bottom:22px;
   }
-  .eyebrow::before{content:'';width:24px;height:2px;background:var(--accent-blue);}
+  .eyebrow::before{content:'';width:24px;height:1px;background:var(--seal);}
   h1{
     font-family:var(--serif);font-weight:900;
     font-size:clamp(34px,4.6vw,54px);
     line-height:1.25;color:var(--navy);
     margin-bottom:24px;
   }
-  h1 em{font-style:normal;color:var(--accent-blue);}
-  .hero-sub{
-    font-size:16.5px;color:var(--muted);max-width:480px;margin-bottom:36px;
-    word-break: keep-all;
-  }
+  h1 em{font-style:normal;color:var(--seal);}
+  .hero-sub{font-size:16.5px;color:var(--muted);max-width:480px;margin-bottom:36px;}
   .btn-row{display:flex;gap:14px;flex-wrap:wrap;}
   .btn{
-    padding:15px 28px;border-radius:4px;font-size:15px;font-weight:700;
+    padding:15px 28px;border-radius:2px;font-size:15px;font-weight:700;
     display:inline-block;transition:all .2s;border:1px solid transparent;
   }
-  .btn-primary{background:var(--accent-blue);color:var(--white);}
-  .btn-primary:hover{background:var(--accent-hover);}
+  .btn-primary{background:var(--seal);color:var(--white);}
+  .btn-primary:hover{background:#035a91;}
   .btn-secondary{border-color:var(--navy);color:var(--navy);}
-  .btn-secondary:hover{background:var(--navy);color:var(--white);}
+  .btn-secondary:hover{background:var(--navy);color:var(--paper);}
 
-  /* stamp graphic (블루톤으로 변경) */
-  .stamp-wrap{display:flex;align-items:center;justify-content:center;position:relative;}
-  .stamp{
-    width:290px;height:290px;position:relative;
-    animation:rotate 40s linear infinite;
+  .logo-wrap{display:flex;align-items:center;justify-content:center;padding:20px;}
+  .logo-plate{
+    position:relative;width:100%;max-width:340px;
+    background:var(--white);border:1px solid var(--paper-line);
+    padding:52px 40px;display:flex;flex-direction:column;align-items:center;gap:22px;
   }
-  @keyframes rotate{from{transform:rotate(0deg);}to{transform:rotate(360deg);}}
-  .stamp svg{width:100%;height:100%;}
-  .stamp-core{
-    position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
-    width:150px;height:150px;border:3px solid var(--accent-blue);border-radius:50%;
-    display:flex;align-items:center;justify-content:center;flex-direction:column;
-    animation:counter-rotate 40s linear infinite;
-  }
-  @keyframes counter-rotate{from{transform:translate(-50%,-50%) rotate(0deg);}to{transform:translate(-50%,-50%) rotate(-360deg);}}
-  .stamp-core span{
-    font-family:var(--serif);font-weight:900;color:var(--accent-blue);
-    text-align:center;line-height:1.3;
-  }
-  .stamp-core .kr{font-size:22px;}
-  .stamp-core .en{font-size:10px;letter-spacing:1.5px;color:var(--navy);margin-top:6px;font-family:var(--sans);}
-
-  @media(prefers-reduced-motion:reduce){
-    .stamp,.stamp-core{animation:none;}
-  }
+  .logo-plate::before{content:'';position:absolute;top:0;left:0;width:34px;height:4px;background:var(--seal);}
+  .logo-plate::after{content:'';position:absolute;bottom:0;right:0;width:34px;height:4px;background:var(--seal);}
+  .logo-plate img{width:112px;height:112px;object-fit:contain;}
+  .logo-plate .logo-word{text-align:center;}
+  .logo-plate .logo-word .kr{font-family:var(--serif);font-weight:900;font-size:23px;color:var(--navy);letter-spacing:1px;}
+  .logo-plate .logo-word .en{display:block;font-size:11px;letter-spacing:2px;color:var(--muted);margin-top:8px;text-transform:uppercase;}
 
   /* ===== TRUST BAR ===== */
-  .trustbar{
-    background:var(--navy);color:var(--white);padding:22px 0;
-  }
-  .trustbar .wrap{
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;
-    font-size:14px;font-weight:500;letter-spacing:0.3px;
-  }
-  .trustbar span{opacity:0.9;}
-  .trustbar strong{color:var(--accent-blue);font-weight:700; color: #60b6e7;} /* 네이비 위에서 잘 보이는 밝은 블루 */
+  .trustbar{background:var(--navy);color:var(--paper);padding:20px 0;}
+  .trustbar .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;font-size:13.5px;font-weight:500;}
+  .trustbar span{opacity:0.85;}
+  .trustbar a{color:var(--brass-light);font-weight:700;opacity:1;}
+  .trustbar a:hover{text-decoration:underline;}
 
   /* ===== SECTION HEADER ===== */
-  .section{padding:96px 0;}
-  .section-head{max-width:600px;margin-bottom:56px;}
-  .section-tag{
-    font-size:13px;font-weight:700;letter-spacing:2px;color:var(--accent-blue);
-    text-transform:uppercase;margin-bottom:14px;
-  }
-  .section-title{
-    font-family:var(--serif);font-weight:700;font-size:clamp(26px,3vw,36px);
-    color:var(--navy);line-height:1.35;
-  }
-  .section-desc{margin-top:16px;color:var(--muted);font-size:16px;}
+  .section{padding:90px 0;}
+  .section-head{max-width:600px;margin-bottom:52px;}
+  .section-tag{font-size:12.5px;font-weight:700;letter-spacing:2px;color:var(--brass);text-transform:uppercase;margin-bottom:14px;}
+  .section-title{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3vw,36px);color:var(--navy);line-height:1.35;}
+  .section-desc{margin-top:16px;color:var(--muted);font-size:15.5px;}
 
   /* ===== SERVICES ===== */
-  .services{background:var(--paper);border-top:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line);}
+  .services{background:var(--white);border-top:1px solid var(--paper-line);border-bottom:1px solid var(--paper-line);}
   .service-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1px;background:var(--paper-line);border:1px solid var(--paper-line);}
-  .service-card{
-    background:var(--white);padding:40px;transition:background .2s;
-  }
-  .service-card:hover{background:#f8fafc;}
-  .service-ref{
-    font-size:13px;color:var(--accent-blue);font-weight:700;letter-spacing:1px;
-    margin-bottom:16px;font-variant-numeric:tabular-nums;
-  }
-  .service-name{
-    font-family:var(--serif);font-weight:700;font-size:22px;color:var(--navy);
-    margin-bottom:12px;
-  }
-  .service-desc{font-size:15px;color:var(--muted); word-break: keep-all;}
+  .service-card{background:var(--white);padding:36px 34px;transition:background .2s;}
+  .service-card:hover{background:var(--paper);}
+  .service-ref{font-size:12px;color:var(--brass);font-weight:700;letter-spacing:1px;margin-bottom:16px;}
+  .service-name{font-family:var(--serif);font-weight:700;font-size:19px;color:var(--navy);margin-bottom:12px;}
+  .service-desc{font-size:14.5px;color:var(--muted);}
 
   /* ===== ABOUT / PROCESS ===== */
   .about-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:64px;align-items:start;}
-  .about-card{
-    background:var(--navy);color:var(--white);padding:48px;border-radius:4px;
-    position:relative;
-  }
-  .about-card::before{
-    content:'';position:absolute;top:16px;left:16px;right:16px;bottom:16px;
-    border:1px solid rgba(255,255,255,0.15);pointer-events:none;
-  }
-  .about-card h3{font-family:var(--serif);font-size:24px;margin-bottom:20px; color:#60b6e7;}
-  .about-card p{font-size:15px;color:rgba(255,255,255,0.85); margin-bottom: 16px; word-break: keep-all;}
-  
-  .process-list{display:flex;flex-direction:column;gap:0;}
-  .process-item{
-    display:flex;gap:22px;padding:24px 0;border-bottom:1px solid var(--paper-line);
-  }
+  .about-card{background:var(--navy);color:var(--paper);padding:40px;border-radius:2px;position:relative;}
+  .about-card::before{content:'';position:absolute;top:16px;left:16px;right:16px;bottom:16px;border:1px solid rgba(244,246,248,0.25);pointer-events:none;}
+  .about-card h3{font-family:var(--serif);font-size:22px;margin-bottom:14px;}
+  .about-card p{font-size:14.5px;color:rgba(244,246,248,0.8);margin-bottom:12px;}
+  .about-card p.tagline{color:var(--white);font-weight:600;border-top:1px solid rgba(244,246,248,0.2);padding-top:16px;margin-top:16px;}
+  .process-list{display:flex;flex-direction:column;}
+  .process-item{display:flex;gap:22px;padding:22px 0;border-bottom:1px solid var(--paper-line);}
   .process-item:first-child{padding-top:0;}
-  .process-num{
-    font-family:var(--serif);font-weight:900;font-size:24px;color:var(--accent-blue);
-    min-width:38px;
+  .process-num{font-family:var(--serif);font-weight:900;font-size:22px;color:var(--brass);min-width:38px;}
+  .process-body h4{font-size:16px;font-weight:700;color:var(--navy);margin-bottom:6px;}
+  .process-body p{font-size:14px;color:var(--muted);}
+
+  /* ===== MAP ===== */
+  .map-section{padding:0 0 90px;}
+  .map-frame{
+    width:100%;height:340px;border:1px solid var(--paper-line);
+    filter:grayscale(0.15) contrast(1.02);
   }
-  .process-body h4{font-size:17px;font-weight:700;color:var(--navy);margin-bottom:6px;}
-  .process-body p{font-size:15px;color:var(--muted);}
+  .map-caption{
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+    padding:16px 20px;background:var(--white);border:1px solid var(--paper-line);border-top:none;font-size:14px;
+  }
+  .map-caption a{color:var(--seal);font-weight:700;}
 
   /* ===== CONTACT ===== */
-  .contact{background:var(--navy-deep);color:var(--white);}
-  .contact .section-tag{color:#60b6e7;}
+  .contact{background:var(--navy-deep);color:var(--paper);}
+  .contact .section-tag{color:var(--brass-light);}
   .contact .section-title{color:var(--white);}
-  .contact .section-desc{color:rgba(255,255,255,0.7);}
+  .contact .section-desc{color:rgba(244,246,248,0.7);}
   .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;margin-top:20px;}
-  .info-list{display:flex;flex-direction:column;gap:24px;}
+  .info-list{display:flex;flex-direction:column;gap:22px;}
   .info-item{display:flex;gap:16px;align-items:flex-start;}
+  .info-item a{transition:color .2s;}
+  .info-item a:hover{color:var(--brass-light);}
   .info-icon{
-    width:42px;height:42px;border:1px solid rgba(255,255,255,0.2);border-radius:50%;
+    width:38px;height:38px;border:1px solid var(--brass);border-radius:50%;
     display:flex;align-items:center;justify-content:center;flex-shrink:0;
-    color:#60b6e7;font-size:16px;
+    color:var(--brass-light);font-size:15px;
   }
-  .info-item strong{display:block;font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:4px;font-weight:500;}
-  .info-item span{font-size:16px;font-weight:600;}
+  .info-item strong{display:block;font-size:14px;color:rgba(244,246,248,0.6);margin-bottom:3px;font-weight:500;}
+  .info-item span,.info-item a{font-size:15.5px;font-weight:600;}
 
-  form{display:flex;flex-direction:column;gap:16px;}
-  .field label{
-    display:block;font-size:14px;color:rgba(255,255,255,0.7);margin-bottom:8px;
-  }
+  form{display:flex;flex-direction:column;gap:14px;}
+  .field label{display:block;font-size:13px;color:rgba(244,246,248,0.65);margin-bottom:6px;}
   .field input,.field textarea{
-    width:100%;background:rgba(255,255,255,0.05);
-    border:1px solid rgba(255,255,255,0.15);
-    color:var(--white);padding:14px 16px;font-size:15px;border-radius:4px;
-    font-family:var(--sans);
+    width:100%;background:rgba(244,246,248,0.06);
+    border:1px solid rgba(244,246,248,0.2);
+    color:var(--paper);padding:13px 14px;font-size:14.5px;border-radius:2px;font-family:var(--sans);
   }
-  .field input::placeholder,.field textarea::placeholder{color:rgba(255,255,255,0.3);}
-  .field textarea{resize:vertical;min-height:120px;}
-  .field input:focus,.field textarea:focus{
-    outline:2px solid var(--accent-blue);outline-offset:1px;border-color:var(--accent-blue);
+  .field input::placeholder,.field textarea::placeholder{color:rgba(244,246,248,0.35);}
+  .field textarea{resize:vertical;min-height:100px;}
+  .field input:focus,.field textarea:focus{outline:2px solid var(--brass-light);outline-offset:1px;border-color:var(--brass-light);}
+
+  .consent{display:flex;align-items:flex-start;gap:10px;font-size:12.5px;color:rgba(244,246,248,0.65);margin-top:2px;}
+  .consent input{margin-top:3px;flex-shrink:0;}
+  .consent a{color:var(--brass-light);text-decoration:underline;}
+  details.privacy{
+    margin-top:4px;background:rgba(244,246,248,0.05);border:1px solid rgba(244,246,248,0.15);
+    border-radius:2px;padding:12px 14px;font-size:12px;color:rgba(244,246,248,0.6);
   }
+  details.privacy summary{cursor:pointer;font-size:12.5px;color:var(--brass-light);font-weight:600;}
+  details.privacy p{margin-top:8px;line-height:1.6;}
+
   .submit-btn{
-    margin-top:8px;background:var(--accent-blue);color:var(--white);border:none;
-    padding:16px;font-size:16px;font-weight:700;border-radius:4px;cursor:pointer;
-    transition:background .2s;
+    margin-top:6px;background:var(--seal);color:var(--white);border:none;
+    padding:15px;font-size:15px;font-weight:700;border-radius:2px;cursor:pointer;transition:background .2s;
   }
-  .submit-btn:hover{background:var(--accent-hover);}
-  .submit-btn:focus-visible{outline:2px solid var(--accent-blue);outline-offset:2px;}
+  .submit-btn:hover{background:#035a91;}
+  .submit-btn:focus-visible{outline:2px solid var(--brass-light);outline-offset:2px;}
 
   /* ===== FOOTER ===== */
-  footer{background:var(--navy-deep);border-top:1px solid rgba(255,255,255,0.1);padding:32px 0;}
-  footer .wrap{
-    display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;
-    font-size:13px;color:rgba(255,255,255,0.5);
-  }
-  footer a{color:rgba(255,255,255,0.7);}
-  footer a:hover{color:#60b6e7;}
+  footer{background:var(--navy-deep);border-top:1px solid rgba(244,246,248,0.1);padding:24px 0;}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12.5px;color:rgba(244,246,248,0.45);}
+  footer .footer-links{display:flex;gap:16px;}
+  footer a{color:rgba(244,246,248,0.6);}
+  footer a:hover{color:var(--brass-light);}
 
   @media(max-width:860px){
     .hero-grid{grid-template-columns:1fr;}
-    .stamp-wrap{order:-1;margin-bottom:8px;}
-    .stamp{width:200px;height:200px;}
-    .stamp-core{width:104px;height:104px;}
-    .stamp-core .kr{font-size:16px;}
+    .logo-wrap{order:-1;margin-bottom:8px;padding:0;}
+    .logo-plate{padding:36px 28px;}
+    .logo-plate img{width:88px;height:88px;}
+    .logo-plate .logo-word .kr{font-size:19px;}
     .nav-links{display:none;}
     .service-grid{grid-template-columns:1fr;}
     .about-grid{grid-template-columns:1fr;}
     .contact-grid{grid-template-columns:1fr;}
     .trustbar .wrap{flex-direction:column;gap:8px;}
+    .map-frame{height:260px;}
   }
 </style>
 </head>
@@ -264,10 +261,7 @@
 
 <header>
   <nav class="nav wrap">
-    <div class="brand">
-      <!-- 로고 이미지 연동 -->
-      <a href="#"><img src="1.jpg" alt="태조관세사무소 로고"></a>
-    </div>
+    <a href="#" class="brand"><img src="assets/logo-full.png" alt="태조관세사무소 로고"></a>
     <div class="nav-links">
       <a href="#services">업무분야</a>
       <a href="#about">사무소 소개</a>
@@ -283,8 +277,8 @@
     <div>
       <div class="eyebrow">Licensed Customs Attorney</div>
       <h1>정확한 통관 검토,<br>확실한 <em>관세 절감</em>의 시작</h1>
-<p class="hero-sub">
-        관세 환급, FTA 원산지 판정, 품목분류부터 수출입통관까지 —<br>
+      <p class="hero-sub">
+        관세 환급, FTA 원산지 판정, 품목분류부터 수출입통관까지 —
         태조관세사무소가 함께합니다.
       </p>
       <div class="btn-row">
@@ -292,20 +286,12 @@
         <a href="#services" class="btn btn-secondary">업무분야 보기</a>
       </div>
     </div>
-    <div class="stamp-wrap">
-      <div class="stamp">
-        <svg viewBox="0 0 300 300">
-          <defs>
-            <path id="circlePath" d="M150,150 m-125,0 a125,125 0 1,1 250,0 a125,125 0 1,1 -250,0" />
-          </defs>
-          <circle cx="150" cy="150" r="140" fill="none" stroke="#14284b" stroke-width="1.5" stroke-dasharray="2 4"/>
-          <circle cx="150" cy="150" r="125" fill="none" stroke="#0071ad" stroke-width="1.5"/>
-          <text font-family="Pretendard, sans-serif" font-size="12.5" font-weight="600" letter-spacing="4" fill="#14284b">
-            <textPath href="#circlePath" startOffset="2%">TAEJO CUSTOMS & Trade Service · TAEJO CUSTOMS & Trade Service ·</textPath>
-          </text>
-        </svg>
-        <div class="stamp-core">
-          <span class="kr">태조<br>관세사무소</span>      
+    <div class="logo-wrap">
+      <div class="logo-plate">
+        <img src="assets/logo-mark.png" alt="태조관세사무소 심볼마크">
+        <div class="logo-word">
+          <span class="kr">태조관세사무소</span>
+          <span class="en">Taejo Customs &amp; Trade Service</span>
         </div>
       </div>
     </div>
@@ -315,7 +301,7 @@
 <div class="trustbar">
   <div class="wrap">
     <span>FTA 원산지 검증 대응 · 품목분류 사전심사 · 각종 컨설팅 지원</span>
-    <span>상담문의 <strong>010-5930-7823</strong></span>
+    <span>상담문의 <a href="tel:01059307823">010-5930-7823</a></span>
   </div>
 </div>
 
@@ -359,7 +345,7 @@
       <h3>태조관세사무소</h3>
       <p>비즈니스의 흐름을 잇는 든든한 파트너, 태조관세사무소 대표 관세사 조성빈입니다.</p>
       <p>다년간 축적한 깊이 있는 실무 노하우와 기업 경영에 대한 지속적인 연구를 바탕으로, 단순한 신고 대행을 넘어 화주분들의 비즈니스 성장을 돕습니다.</p>
-      <p><strong>정확한 법령 해석과 꼼꼼한 서류 검토를 바탕으로, 기업의 통관·관세 리스크를 함께 관리합니다.</strong></p>
+      <p class="tagline">정확한 법령 해석과 꼼꼼한 서류 검토를 바탕으로, 기업의 통관·관세 리스크를 함께 관리합니다.</p>
     </div>
     <div id="process">
       <div class="section-tag">Process</div>
@@ -367,34 +353,32 @@
       <div class="process-list">
         <div class="process-item">
           <div class="process-num">01</div>
-          <div class="process-body">
-            <h4>상담 신청</h4>
-            <p>아래 문의 양식 또는 전화로 사안 개요를 남겨주세요.</p>
-          </div>
+          <div class="process-body"><h4>상담 신청</h4><p>아래 문의 양식 또는 전화로 사안 개요를 남겨주세요.</p></div>
         </div>
         <div class="process-item">
           <div class="process-num">02</div>
-          <div class="process-body">
-            <h4>자료 검토</h4>
-            <p>관련 서류와 규정을 바탕으로 사실관계를 확인합니다.</p>
-          </div>
+          <div class="process-body"><h4>자료 검토</h4><p>관련 서류와 규정을 바탕으로 사실관계를 확인합니다.</p></div>
         </div>
         <div class="process-item">
           <div class="process-num">03</div>
-          <div class="process-body">
-            <h4>검토 의견 회신</h4>
-            <p>적용 가능한 방안과 예상 리스크를 정리해 안내드립니다.</p>
-          </div>
+          <div class="process-body"><h4>검토 의견 회신</h4><p>적용 가능한 방안과 예상 리스크를 정리해 안내드립니다.</p></div>
         </div>
         <div class="process-item">
           <div class="process-num">04</div>
-          <div class="process-body">
-            <h4>진행 · 대리</h4>
-            <p>필요 시 신청·이의제기 등 실제 절차를 대리 진행합니다.</p>
-          </div>
+          <div class="process-body"><h4>진행 · 대리</h4><p>필요 시 신청·이의제기 등 실제 절차를 대리 진행합니다.</p></div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="map-section wrap">
+  <iframe class="map-frame" loading="lazy" allowfullscreen
+    src="https://www.google.com/maps?q=%EC%B6%A9%EB%82%A8%20%EC%B2%9C%EC%95%88%EC%8B%9C%20%EC%84%9C%EB%B6%81%EA%B5%AC%20%EB%B6%88%EB%8B%B925%EB%A1%9C%20244&output=embed"
+    title="태조관세사무소 오시는 길"></iframe>
+  <div class="map-caption">
+    <span>충남 천안시 서북구 불당25로 244 15층 1514호</span>
+    <a href="https://map.naver.com/p/search/충남 천안시 서북구 불당25로 244" target="_blank" rel="noopener">네이버 지도에서 보기 ↗</a>
   </div>
 </section>
 
@@ -409,32 +393,24 @@
       <div class="info-list">
         <div class="info-item">
           <div class="info-icon">☏</div>
-          <div><strong>전화 문의</strong><span>010-5930-7823</span></div>
-<div class="info-item">
+          <div><strong>전화 문의</strong><a href="tel:01059307823">010-5930-7823</a></div>
+        </div>
+        <div class="info-item">
           <div class="info-icon">✉</div>
-          <div>
-            <strong>이메일</strong>
-            <!-- mailto: 를 넣으면 클릭 시 자동으로 메일 보내기 창이 열립니다 -->
-            <a href="mailto:sungbin@tjcustoms.co.kr">sungbin@tjcustoms.co.kr</a>
-          </div>
+          <div><strong>이메일</strong><a href="mailto:sungbin@tjcustoms.co.kr">sungbin@tjcustoms.co.kr</a></div>
         </div>
         <div class="info-item">
           <div class="info-icon">＠</div>
-          <div>
-            <strong>블로그</strong>
-            <!-- target="_blank"를 넣으면 내 홈페이지가 꺼지지 않고 새 탭에서 블로그가 열립니다 -->
-            <a href="https://blog.naver.com/waynechris" target="_blank">https://blog.naver.com/waynechris</a>
-          </div>
-        </div>        <div class="info-item">
-          <div class="info-icon">＠</div>
-          <div><strong>공식 블로그</strong><a href="https://blog.naver.com/waynechris" target="_blank">통관부터 환급까지 ↗</a></div>
+          <div><strong>공식 블로그</strong><a href="https://blog.naver.com/waynechris" target="_blank" rel="noopener">통관부터 환급까지 ↗</a></div>
         </div>
         <div class="info-item">
           <div class="info-icon">⌂</div>
-          <div><strong>사무소 위치</strong><span>[충남 천안시 서북구 불당25로 244 15층 1514호]</span></div>
+          <div><strong>사무소 위치</strong><span>충남 천안시 서북구 불당25로 244 15층 1514호</span></div>
         </div>
       </div>
-      <form id="inquiryForm">
+
+      <!-- Formspree 등 폼 수신 서비스 연동 권장: action의 YOUR_FORM_ID를 발급받은 ID로 교체 -->
+      <form id="inquiryForm" action="https://formspree.io/f/xeeyelee" method="POST">
         <div class="field">
           <label for="name">성함 / 회사명</label>
           <input type="text" id="name" name="name" placeholder="예: 홍길동 / (주)태조무역" required>
@@ -447,6 +423,21 @@
           <label for="message">문의 내용</label>
           <textarea id="message" name="message" placeholder="상담받고 싶은 내용을 간단히 적어주세요"></textarea>
         </div>
+
+        <label class="consent">
+          <input type="checkbox" id="consent" name="consent" required>
+          <span>개인정보 수집·이용에 동의합니다. (필수)</span>
+        </label>
+        <details class="privacy">
+          <summary>개인정보 수집·이용 안내 보기</summary>
+          <p>
+            수집 항목: 성함/회사명, 연락처, 문의 내용<br>
+            수집 목적: 관세·통관 상담 문의 응대<br>
+            보유 기간: 상담 완료 후 6개월간 보관 후 파기<br>
+            위 동의를 거부할 권리가 있으며, 동의 거부 시 상담 신청이 제한될 수 있습니다.
+          </p>
+        </details>
+
         <button type="submit" class="submit-btn">상담 신청하기</button>
       </form>
     </div>
@@ -455,23 +446,13 @@
 
 <footer>
   <div class="wrap">
-    <span>© 2026 태조관세사무소. All rights reserved.</span>
-    <span>사업자등록번호 [779-38-01618] · 대표 관세사 조성빈</span>
+    <span>© 2026 태조관세사무소. All rights reserved. 사업자등록번호 779-38-01618 · 대표 관세사 조성빈</span>
+    <div class="footer-links">
+      <a href="https://blog.naver.com/waynechris" target="_blank" rel="noopener">블로그</a>
+      <a href="tel:01059307823">전화 문의</a>
+    </div>
   </div>
 </footer>
-
-<script>
-  document.getElementById('inquiryForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    const name = document.getElementById('name').value;
-    const contact = document.getElementById('contact').value;
-    const message = document.getElementById('message').value;
-    const to = 'csbcustoms@gmail.com'; 
-    const subject = encodeURIComponent('[홈페이지 상담신청] ' + name);
-    const body = encodeURIComponent('성함/회사명: ' + name + '\n연락처: ' + contact + '\n문의내용: ' + message);
-    window.location.href = 'mailto:' + to + '?subject=' + subject + '&body=' + body;
-  });
-</script>
 
 </body>
 </html>
